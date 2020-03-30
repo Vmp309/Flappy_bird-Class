@@ -5,12 +5,12 @@
 #include <stdio.h>
 #include <windows.h>
 #include <wincon.h>
-#define KEY_UP 119
-#define KEY_DOWN 115
+#include <string>
+#include "SaveRecords.h"
 
 using namespace std;
 
-class Menu
+class Menu : public SaveRecords
 {
 private:
     int opcao1;
@@ -18,6 +18,9 @@ private:
     int opcao2;
 
     int opcao3;
+
+protected:
+    std::string playerName;
 
 public:
     Menu();
