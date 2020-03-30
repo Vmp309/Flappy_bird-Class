@@ -17,7 +17,7 @@ void SaveRecords::HighestScore(int score){
     cerr << "Erro ao abrir um arquivo de Flappy Bird" << endl;
  }else{
 
-///Ler arquivo para saber qual é o recorde atual
+///Ler arquivo para saber qual Ã© o recorde atual
 
     while (getline(records, record)){
         cout << record << endl;
@@ -28,6 +28,7 @@ void SaveRecords::HighestScore(int score){
 
 
     if (score > highest){
+        records << playerName << endl;
         records << score;
     }
     records.close();
