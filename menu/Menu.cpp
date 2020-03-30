@@ -25,6 +25,7 @@ int Menu::displayMenuPrincipal(){
         cout << "Pressione ENTER apos selecionar uma opcao" << endl;
 
         cin >> ch;
+        cin.ignore();
 
         if (ch != 1 && ch != 2 && ch != 3){
             cout << "Opcao invalida" << endl;
@@ -36,6 +37,22 @@ int Menu::displayMenuPrincipal(){
         }
         else{
         /// Escolheu JOGAR ou RECORDES
+            if (ch == 1){
+                ///Escolheu JOGAR
+                system("cls");
+                cout << "---------------------FLAPPY BIRD----------------------" << endl << endl << endl << endl;
+
+                cout << "                   DIGITE O SEU NICKNAME:                         " << endl <<  endl;
+
+                getline (cin, playerName); /// NOME FICA SALVO ATÉ QUE SE BATA O RECORDE E O NOME SEJA GRAVADO NO ARQUIVO
+                ///a VARIÁVEL playerName FICA NA CLASSE SaveRecords
+
+            }
+            if (ch == 2){
+                showRecords();
+            }
+
+
            return ch;
             break;
         }
@@ -58,11 +75,12 @@ int Menu::displayMenuPerdeuOJogo(){
             cout << "Opcao Invalida" << endl;
 
         }else if (ch == 1){
-            ///Cria uma nova inst�ncia do jogo para jogar novamente!!!
+            ///Cria uma nova instância do jogo para jogar novamente!!!
+            break;
 
         }else if (ch == 2){
         /// Voltar ao menu principal
-
+            break;
         }
         return ch;
     }
