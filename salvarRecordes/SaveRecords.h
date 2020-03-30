@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
- /// Iremos precisar da vari·vel score que est· em protected na classe
+ /// Iremos precisar da vari√°vel score que est√° em protected na classe
 
 
 using namespace std;
@@ -15,6 +15,7 @@ class SaveRecords
     private:
 
     protected:
+        string playerName;
         int score;
 
     public:
